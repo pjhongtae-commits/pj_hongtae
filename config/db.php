@@ -1,13 +1,8 @@
 <?php
-$host = "localhost";
-$db   = "ai_backoffice";
-$user = "root";
-$pass = "";
+$pdo = new PDO(
+"mysql:host=gondola.proxy.rlwy.net;dbname=railway;port=41366",
+"root",
+"JIQXqeOFGMIsnOLYAgQeLFoElAFGAcgt"
+);
 
-try {
-    $pdo = new PDO("mysql:host=$host;dbname=$db;charset=utf8",$user,$pass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch(PDOException $e){
-    die("DB CONNECT ERROR: " . $e->getMessage());
-}
-?>
+$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
