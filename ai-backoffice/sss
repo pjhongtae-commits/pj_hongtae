@@ -1,0 +1,31 @@
+ai-backoffice/
+│
+├─ index.php
+│   └─ ✅ หน้าเพิ่มสินค้า (Add Product)
+│
+├─ dashboard.php
+│   └─ ✅ หน้า Dashboard หลัก (AdminLTE + Chart + AI)
+│
+├─ config/
+│   └─ db.php
+│      └─ ✅ เชื่อม DB (PDO, ใช้ ai_shop)
+│
+├─ modules/
+│   ├─ products.php
+│   │   └─ ✅ function addProduct(PDO $pdo, ...)
+│   │
+│   └─ orders.php
+│       └─ (ใช้กับ dashboard summary / chart)
+│
+├─ ai/
+│   └─ decision.php
+│       └─ ✅ aiDecision(PDO $pdo)
+│          - เช็ก stock
+│          - log ai_logs
+│          - คืน alerts ให้ dashboard
+│
+├─ dashboard/
+│   └─ ❌ (เคยมี แต่คุณย้ายออกแล้ว)
+│
+└─ assets / vendor
+    └─ ❌ ยังไม่มี (ยังไม่จำเป็น)
